@@ -8,9 +8,18 @@ const scgSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  products: {
+  category: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category',
+  },
+  products: {
+    type: [mongoose.Schema.Types.ObjectId],
     ref: 'Product',
+  },
+  variants: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: 'Variant',
+    default: [],
   },
 });
 

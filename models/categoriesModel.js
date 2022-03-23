@@ -9,7 +9,7 @@ const cgSchema = new mongoose.Schema({
     required: true,
   },
   subCategories: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: [mongoose.Schema.Types.ObjectId],
     ref: 'SubCategory',
   },
 });
